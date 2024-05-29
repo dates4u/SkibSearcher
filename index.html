@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkibSearcher</title>
+    <style>
+        :root {
+            --primary-color: #6200ee;
+            --primary-hover-color: #3700b3;
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --input-bg-color: #333;
+            --input-text-color: #fff;
+            --button-bg-color: #333;
+            --button-hover-color: #555;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            text-align: center;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            font-size: 1rem;
+            outline: none;
+            background-color: var(--input-bg-color);
+            color: var(--input-text-color);
+        }
+        .search-button {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: var(--primary-hover-color);
+        }
+        .advanced-options {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .advanced-options button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: var(--button-bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
+        .advanced-options button:hover {
+            background-color: var(--button-hover-color);
+        }
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2rem;
+            }
+            .search-input, .search-button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            .advanced-options button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <div class="logo">SkibSearcher</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search..." aria-label="Search input">
+            <button class="search-button" aria-label="Search button">Search</button>
+        </div>
+        <div class="advanced-options">
+            <button aria-label="Search Images">Images</button>
+            <button aria-label="Search Videos">Videos</button>
+            <button aria-label="Search News">News</button>
+            <button aria-label="Search Maps">Maps</button>
+        </div>
+    </div>
+</body>
+</html>
